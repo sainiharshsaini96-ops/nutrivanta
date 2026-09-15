@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "on-surface-variant": "#434655", "inverse-on-surface": "#eef0ff", "outline": "#737686", "surface-container-lowest": "#ffffff", "surface-variant": "#dfe2f1", "surface-container-highest": "#dfe2f1", "primary": "#004ac6", "surface-tint": "#0053db", "on-primary": "#ffffff", "inverse-primary": "#b4c5ff", "on-primary-container": "#eeefff", "on-secondary": "#ffffff", "secondary-fixed-dim": "#4cd7f6", "on-secondary-fixed": "#001f26", "outline-variant": "#c3c6d7", "primary-fixed": "#dbe1ff", "surface-container-low": "#f2f3ff", "on-primary-fixed-variant": "#003ea8", "tertiary-fixed": "#ffdad7", "on-error-container": "#93000a", "background": "#faf8ff", "tertiary": "#ab0b1c", "on-tertiary": "#ffffff", "surface": "#faf8ff", "on-secondary-fixed-variant": "#004e5c", "on-primary-fixed": "#00174b", "inverse-surface": "#2c303b", "on-tertiary-fixed-variant": "#930013", "on-surface": "#171b26", "on-background": "#171b26", "on-tertiary-fixed": "#410004", "primary-fixed-dim": "#b4c5ff", "on-tertiary-container": "#ffecea", "secondary": "#00687a", "primary-container": "#2563eb", "on-error": "#ffffff", "on-secondary-container": "#006172", "tertiary-container": "#cf2c30", "surface-container": "#ebedfc", "error-container": "#ffdad6", "secondary-fixed": "#acedff", "error": "#ba1a1a", "tertiary-fixed-dim": "#ffb3ad", "surface-container-high": "#e5e7f6", "secondary-container": "#57dffe", "surface-dim": "#d7d9e8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-xl": "2.5rem", "margin": "2rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "price-card": ["Plus Jakarta Sans"], "price-hero": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "price-strikethrough": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "badge": ["Inter"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "price-card": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "price-hero": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "price-strikethrough": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "badge": ["11px", { "lineHeight": "12px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors -ml-1.5" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="ElectroMart Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe7zLsjSSlurjtUtFUqtrS3DFxlDInTOn9imUd2zehR76Qk35W4kVFwyXe1GzrH5stVp5N0hYquUF-RihTycl94wVxdKWWwJ9MuqAVJcSP3B7H-pRX_3o84K-zq_PtYT646yj_DCTvL4V2TjVhNpVJ1Zxa_Hx9InRpO6BJSR9umFIYKDNWyTFTtihcrZtrRwZ4xfQN7dfz4UhkiWJPyLMutbfrxyiJagB94VY4etQFhNR0ABB98FvXrw"/><h1 class="font-headline-sm text-headline-sm font-bold text-on-surface ml-1 truncate max-w-[180px]">Checkout Flow</h1></div><div class="flex items-center gap-space-xs"><button class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-1.5 right-1.5 min-w-[16px] h-4 px-1 rounded-full bg-primary-container text-on-primary font-badge text-badge flex items-center justify-center leading-none">2</span></button><button class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoG9OCOitjB_d6OG72cC0bNQMloIw1MDPER0bwIH7LFOf-igH4fFa-u32YXz_qvQlyxY7peTELkQ4eUpNMBrq3JO8AU6fM9Qo-sGCwqMNVU-b9RAQgdAFbN4VJXAwYYGjC4dbz9IfSa5kjFGLMFGQM16wOacpq7G9uVrdEbZXKC4YkLZTFKVIZJ3pIikM9vVUdE9GhhNzAfvguG-MkHfTIEEcabeBQDc9caaJwaxc9Zip0huYBNcIIng"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full px-margin-mobile pb-12">
+<!-- Stepper Progress Tracker -->
+<section class="mt-4 mb-5 bg-surface-container-lowest rounded-xl p-4 shadow-sm">
+<div class="flex items-center justify-between relative">
+<!-- Line Behind Steps -->
+<div class="absolute left-4 right-4 top-1/2 -translate-y-1/2 h-1 bg-surface-container-high z-0"></div>
+<div class="absolute left-4 w-2/3 top-1/2 -translate-y-1/2 h-1 bg-primary-container z-0 transition-all duration-300"></div>
+<!-- Step 1: Address (Completed) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-badge text-badge text-primary-container mt-1 font-semibold">Address</span>
+</div>
+<!-- Step 2: Delivery (Completed) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<span class="font-badge text-badge text-primary-container mt-1 font-semibold">Delivery</span>
+</div>
+<!-- Step 3: Payment (Active) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary-container shadow-md flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+<span class="w-3 h-3 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<span class="font-badge text-badge text-on-surface mt-1 font-bold">Payment</span>
+</div>
+<!-- Step 4: Review (Pending) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-outline flex items-center justify-center font-label-md text-label-md">
+          4
+        </div>
+<span class="font-badge text-badge text-outline mt-1">Review</span>
+</div>
+</div>
+</section>
+<!-- Accordion Group: Shipping Address & Delivery Method -->
+<section class="flex flex-col gap-space-sm mb-5">
+<!-- Shipping Address Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-low text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Alex Morgan</h3>
+<span class="bg-surface-container-high text-on-surface-variant font-badge text-badge px-2 py-0.5 rounded-full">Home</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            742 Evergreen Terrace, Apt 4B<br/>
+            New York, NY 10001
+          </p>
+<span class="font-body-sm text-body-sm text-outline mt-1 inline-block">+1 (555) 924-8182</span>
+</div>
+</div>
+<button class="font-label-md text-label-md text-primary-container hover:text-primary font-semibold flex items-center gap-0.5 pt-1">
+        Edit
+      </button>
+</div>
+<!-- Delivery Method Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">ElectroMart Express</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-badge text-badge px-1.5 py-0.5 rounded-full font-bold">FREE</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">Estimated Tomorrow by 2:00 PM</p>
+</div>
+</div>
+<button class="font-label-md text-label-md text-primary-container hover:text-primary font-semibold">
+        Change
+      </button>
+</div>
+</section>
+<!-- Expandable Cart Preview Section -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-5">
+<div class="flex items-center justify-between cursor-pointer select-none" id="cart-accordion-trigger" onclick="toggleCartPreview()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shopping_basket</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Order Summary (2 Items)</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="font-label-md text-label-md font-semibold text-primary-container">$317.99</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-300" id="cart-chevron">expand_more</span>
+</div>
+</div>
+<!-- Collapsible Mini Item List -->
+<div class="flex flex-col gap-3 mt-4 pt-3 border-t-0" id="cart-items-preview">
+<!-- Item 1 -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2.5 rounded-lg">
+<img class="w-14 h-14 object-cover rounded-lg bg-surface-variant shrink-0" data-alt="Studio photograph of sleek Sony WH-1000XM5 wireless noise cancelling over-ear headphones in midnight blue matte finish, perfectly isolated on clean high-tech gradient backdrop with cool neon cyan reflections and sharp pro-audio aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg65t1Wbaz-1B_BtX8e-2iIrK5SazVwqnYPaOXcqpZRW8z0wHvBA2_ZGtGTMw4Smel8nqS3N-79UCkr_fzJdLU1fKl0jOLndSOgKiq-n8mFWa8PCITogbX0ycpGhG__EloHjPVNjpLQ-Fs2StrbZpqcFP4bdRYncj0a4sCwJyEhclJmgHZDH466gIrfnelkUIVVLh9MlraPEGuspxNiTo0ekl1betHd40JAZUsdTixzt-_2aD8Hypx7w"/>
+<div class="flex flex-col flex-1 min-w-0">
+<h4 class="font-label-md text-label-md font-bold text-on-surface truncate">Sony WH-1000XM5 Wireless</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Midnight Blue • Qty 1</span>
+<span class="font-price-card text-price-card font-extrabold text-on-surface mt-0.5">$278.00</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2.5 rounded-lg">
+<img class="w-14 h-14 object-cover rounded-lg bg-surface-variant shrink-0" data-alt="Modern ultra-compact Anker GaN 65W fast charger block in textured matte carbon black, dual USB-C ports with illuminated subtle ice-blue accent ring on minimalist tech desk setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoNWqiyP1rvvGeWaVoPXX2_OBEi2BLzL5zIEmL6Tq2xiUxiCaJcEGex6NfFUToSnplxYJoeg_q2RqFXA4B2dbcGsUwtMbAanRO3pRewjvAB2rNJxezEsG6SbOlm850M3qWgMjBX4m2sEjbzKvG_-Zqy06QWSmYVyka4-xr8sMmlv27Xz3xyn-O-MAav8XEpkqSRBx7_hcb0aRfnVCah5QhZx15ebTJ6oeAbQC6SYEja1sc6iukTA7OOQ"/>
+<div class="flex flex-col flex-1 min-w-0">
+<h4 class="font-label-md text-label-md font-bold text-on-surface truncate">Anker 65W GaN Fast Charger</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Black • Qty 1</span>
+<span class="font-price-card text-price-card font-extrabold text-on-surface mt-0.5">$39.99</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Methods Selection -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-5">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Payment Method</h2>
+<span class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+        Encrypted
+      </span>
+</div>
+<!-- Radio Options Stack -->
+<div class="flex flex-col gap-3">
+<!-- Option 1: Credit / Debit Card (Selected) -->
+<div class="rounded-xl bg-surface-container-low p-3.5 transition-all duration-200">
+<label class="flex items-center justify-between cursor-pointer" onclick="selectPayment('card')">
+<div class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 text-primary-container accent-primary-container" name="payment_method" type="radio" value="card"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Credit / Debit Card</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-badge text-badge px-1.5 py-0.5 rounded-md font-bold">Fast</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Visa, Mastercard, Amex</p>
+</div>
+</div>
+<div class="flex gap-1.5 opacity-85">
+<span class="material-symbols-outlined text-primary text-[24px]">credit_card</span>
+</div>
+</label>
+<!-- Active Card Nested Form -->
+<div class="mt-4 pt-3 flex flex-col gap-3" id="card-fields">
+<!-- Card Number Field -->
+<div class="flex flex-col gap-1">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant">Card Number</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 bg-surface-container-lowest rounded-lg px-3 pl-10 font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-bright shadow-sm" type="text" value="4242 •••• •••• 4242"/>
+<span class="material-symbols-outlined absolute left-3 text-[20px] text-primary">credit_card</span>
+<span class="absolute right-3 font-badge text-badge text-secondary font-bold uppercase bg-secondary-fixed/50 px-1.5 py-0.5 rounded">Visa</span>
+</div>
+</div>
+<!-- Expiry & CVV Row -->
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant">Expiry Date</label>
+<input class="w-full h-11 bg-surface-container-lowest rounded-lg px-3 font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-bright shadow-sm" placeholder="MM/YY" type="text" value="09/27"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant flex items-center justify-between">
+<span>CVV / CVC</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-pointer" title="3-digit security code">info</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 bg-surface-container-lowest rounded-lg px-3 font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-bright tracking-widest shadow-sm" maxlength="4" placeholder="•••" type="password" value="888"/>
+<span class="material-symbols-outlined absolute right-3 text-[18px] text-outline">lock</span>
+</div>
+</div>
+</div>
+<!-- Encryption & Save Card Checkbox -->
+<div class="flex items-center gap-2 mt-1">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container" id="save_card" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant select-none" for="save_card">
+              Save card securely with 256-bit AES encryption
+            </label>
+</div>
+</div>
+</div>
+<!-- Option 2: 1-Tap Apple / Google Pay -->
+<div class="rounded-xl bg-surface-container-lowest p-3.5 hover:bg-surface-container-low transition-colors shadow-sm">
+<label class="flex items-center justify-between cursor-pointer" onclick="selectPayment('digital-wallet')">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 text-primary-container accent-primary-container" name="payment_method" type="radio" value="digital-wallet"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Apple Pay / Google Pay</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-badge text-badge px-1.5 py-0.5 rounded-md font-bold">1-Tap</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant biometric checkout</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">contactless</span>
+</label>
+</div>
+<!-- Option 3: ElectroMart BNPL -->
+<div class="rounded-xl bg-surface-container-lowest p-3.5 hover:bg-surface-container-low transition-colors shadow-sm">
+<label class="flex items-center justify-between cursor-pointer" onclick="selectPayment('bnpl')">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 text-primary-container accent-primary-container" name="payment_method" type="radio" value="bnpl"/>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">ElectroMart Pay Later</span>
+<span class="bg-surface-container-high text-primary font-badge text-badge px-1.5 py-0.5 rounded-md font-bold">0% APR</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">4 interest-free payments of $79.49</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">calendar_month</span>
+</label>
+</div>
+<!-- Option 4: Digital Wallets (PayPal/Venmo) -->
+<div class="rounded-xl bg-surface-container-lowest p-3.5 hover:bg-surface-container-low transition-colors shadow-sm">
+<label class="flex items-center justify-between cursor-pointer" onclick="selectPayment('wallet')">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 text-primary-container accent-primary-container" name="payment_method" type="radio" value="wallet"/>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface">PayPal / Venmo</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Connect and checkout securely</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">account_balance_wallet</span>
+</label>
+</div>
+<!-- Option 5: Cash on Delivery -->
+<div class="rounded-xl bg-surface-container-lowest p-3.5 hover:bg-surface-container-low transition-colors shadow-sm">
+<label class="flex items-center justify-between cursor-pointer" onclick="selectPayment('cod')">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 text-primary-container accent-primary-container" name="payment_method" type="radio" value="cod"/>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Pay on Arrival</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cash or Card upon handoff</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">payments</span>
+</label>
+</div>
+</div>
+</section>
+<!-- Promo Code Voucher Section -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-5">
+<label class="font-label-md text-label-md font-bold text-on-surface mb-2 block">Promo Code or Voucher</label>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-11 bg-surface-container-low uppercase rounded-lg px-3 pl-9 font-body-md text-body-md font-bold text-primary focus:outline-none focus:bg-surface-bright" id="promo-input" type="text" value="TECH10"/>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-primary">sell</span>
+</div>
+<button class="h-11 px-5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-bold hover:bg-surface-variant transition-colors">
+        Applied
+      </button>
+</div>
+<!-- Active Promo Tag Pill -->
+<div class="flex items-center justify-between mt-2.5 bg-secondary-fixed/30 text-on-secondary-fixed px-3 py-1.5 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span class="font-label-md text-label-md font-bold">TECH10 applied</span>
+<span class="font-body-sm text-body-sm text-on-secondary-fixed-variant">- $20.00 off order</span>
+</div>
+<button class="text-on-secondary-fixed hover:text-error flex items-center">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</section>
+<!-- Price Breakdown Summary Section -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-5 flex flex-col gap-2.5">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Price Details</h3>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Items Subtotal (2 items)</span>
+<span class="font-semibold text-on-surface">$317.99</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-secondary">
+<span class="flex items-center gap-1">
+<span>Coupon Savings</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-badge text-badge px-1 py-0.2 rounded font-bold">TECH10</span>
+</span>
+<span class="font-semibold">- $20.00</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span class="flex items-center gap-1">
+        Estimated Tax
+        <span class="font-body-sm text-body-sm text-outline">(NY 8.875%)</span>
+</span>
+<span class="font-semibold text-on-surface">$26.45</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-on-surface-variant">
+<span>Shipping &amp; Express Handling</span>
+<div class="flex items-center gap-1.5">
+<span class="font-price-strikethrough text-price-strikethrough text-outline line-through">$9.99</span>
+<span class="font-semibold text-secondary uppercase font-label-md text-label-md">FREE</span>
+</div>
+</div>
+<div class="h-0.5 bg-surface-container-high my-1"></div>
+<div class="flex justify-between items-baseline pt-1">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block">Order Total</span>
+<span class="font-body-sm text-body-sm text-outline">Includes all local applicable taxes</span>
+</div>
+<span class="font-price-hero text-price-hero font-extrabold text-primary-container">$324.44</span>
+</div>
+</section>
+<!-- Security & Trust Indicators -->
+<div class="grid grid-cols-2 gap-2 mb-4">
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg p-2.5 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">256-Bit SSL</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bank-grade security</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest rounded-lg p-2.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">shield</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Buyer Protection</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">100% money back</span>
+</div>
+</div>
+</div>
+<!-- Primary CTA Action Area -->
+<div class="sticky bottom-3 z-40 bg-surface/90 backdrop-blur-md p-1 -mx-1">
+<button class="w-full h-14 bg-primary-container hover:bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm font-bold shadow-lg shadow-primary-container/25 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-150" id="pay-button" onclick="handlePaymentSubmit()">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+<span>Place Order &amp; Pay $324.44</span>
+</button>
+</div>
+</div>
+<script>
+  function toggleCartPreview() {
+    const preview = document.getElementById('cart-items-preview');
+    const chevron = document.getElementById('cart-chevron');
+    if (preview.classList.contains('hidden')) {
+      preview.classList.remove('hidden');
+      chevron.style.transform = 'rotate(0deg)';
+    } else {
+      preview.classList.add('hidden');
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  }
+
+  function selectPayment(type) {
+    const cardFields = document.getElementById('card-fields');
+    if (cardFields) {
+      if (type === 'card') {
+        cardFields.classList.remove('hidden');
+      } else {
+        cardFields.classList.add('hidden');
+      }
+    }
+  }
+
+  function handlePaymentSubmit() {
+    const btn = document.getElementById('pay-button');
+    btn.innerHTML = `
+      <span class="w-5 h-5 border-2 border-on-primary border-t-transparent rounded-full animate-spin"></span>
+      <span>Securing Transaction...</span>
+    `;
+    setTimeout(() => {
+      btn.classList.remove('bg-primary-container');
+      btn.classList.add('bg-secondary');
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[24px]">check_circle</span>
+        <span>Order Placed Successfully!</span>
+      `;
+    }, 1200);
+  }
+</script></main></body></html>
