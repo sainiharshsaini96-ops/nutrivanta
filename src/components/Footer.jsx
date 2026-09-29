@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import { BRAND_INFO } from '../data/mockData';
 
 export default function Footer() {
-  const { setActivePage, setIsPrototypeDrawerOpen } = useApp();
+  const { setActivePage } = useApp();
 
   return (
     <footer className="bg-surface-container-low dark:bg-inverse-surface w-full py-xl px-margin-mobile md:px-margin-desktop border-t border-surface-variant transition-colors mt-auto">
@@ -51,10 +51,7 @@ export default function Footer() {
           <button onClick={() => setActivePage('nutritionists')} className="text-left text-sm text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors">
             Find Nutritionists
           </button>
-          <button onClick={() => setActivePage('prototype_hub')} className="text-left text-sm text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors flex items-center gap-1">
-            <span>Prototype Hub</span>
-            <span className="text-[10px] bg-primary/10 text-primary px-1.5 py-0.2 rounded font-bold">ALL</span>
-          </button>
+
         </div>
 
         {/* For Clients */}
@@ -87,13 +84,7 @@ export default function Footer() {
           <button onClick={() => setActivePage('contact')} className="text-left text-sm text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors">
             Refund & Cancellation
           </button>
-          <button
-            onClick={() => setIsPrototypeDrawerOpen(true)}
-            className="text-left text-xs text-primary font-bold hover:underline mt-2 flex items-center gap-1"
-          >
-            <span className="material-symbols-outlined text-sm">hub</span>
-            <span>Switch Screen View</span>
-          </button>
+
         </div>
       </div>
     </footer>

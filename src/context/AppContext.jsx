@@ -13,7 +13,7 @@ export function AppProvider({ children }) {
   const [isVideoCallOpen, setIsVideoCallOpen] = useState(false);
   const [selectedInvoice, setSelectedInvoice] = useState(null);
   const [toastMessage, setToastMessage] = useState(null);
-  const [isPrototypeDrawerOpen, setIsPrototypeDrawerOpen] = useState(false);
+
   const [darkMode, setDarkMode] = useState(false);
 
   const showToast = (message, type = 'success') => {
@@ -108,8 +108,7 @@ export function AppProvider({ children }) {
         setSelectedInvoice,
         toastMessage,
         showToast,
-        isPrototypeDrawerOpen,
-        setIsPrototypeDrawerOpen,
+
         darkMode,
         toggleDarkMode
       }}

@@ -3,7 +3,7 @@ import { AppProvider, useApp } from './context/AppContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotificationToast from './components/NotificationToast';
-import PrototypeNavDrawer from './components/PrototypeNavDrawer';
+
 import EditProfileModal from './components/EditProfileModal';
 import VideoCallModal from './components/VideoCallModal';
 import InvoiceModal from './components/InvoiceModal';
@@ -16,7 +16,7 @@ import CheckoutPage from './pages/CheckoutPage';
 import ContactPage from './pages/ContactPage';
 import UserProfileDashboard from './pages/UserProfileDashboard';
 import PaymentHistoryDashboard from './pages/PaymentHistoryDashboard';
-import PrototypeHubPage from './pages/PrototypeHubPage';
+
 
 function MainRouter() {
   const { activePage } = useApp();
@@ -37,8 +37,7 @@ function MainRouter() {
         return <UserProfileDashboard />;
       case 'payments':
         return <PaymentHistoryDashboard />;
-      case 'prototype_hub':
-        return <PrototypeHubPage />;
+
       default:
         return <HomePage />;
     }
@@ -57,7 +56,7 @@ function MainRouter() {
       <VideoCallModal />
       <InvoiceModal />
       <NotificationToast />
-      <PrototypeNavDrawer />
+
     </div>
   );
 }
