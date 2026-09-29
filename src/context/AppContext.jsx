@@ -16,6 +16,23 @@ export function AppProvider({ children }) {
 
   const [darkMode, setDarkMode] = useState(false);
 
+  // Auth state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isSignInOpen, setIsSignInOpen] = useState(false);
+
+  const signIn = (userData) => {
+    if (userData) {
+      setUser(prev => ({ ...prev, name: userData.name || prev.name, email: userData.email || prev.email }));
+    }
+    setIsLoggedIn(true);
+  };
+
+  const signOut = () => {
+    setIsLoggedIn(false);
+    setActivePage('home');
+    showToast('You have been signed out. See you soon! 👋', 'info');
+  };
+
   const showToast = (message, type = 'success') => {
     setToastMessage({ message, type, id: Date.now() });
     setTimeout(() => {
@@ -110,7 +127,13 @@ export function AppProvider({ children }) {
         showToast,
 
         darkMode,
-        toggleDarkMode
+        toggleDarkMode,
+
+        isLoggedIn,
+        isSignInOpen,
+        setIsSignInOpen,
+        signIn,
+        signOut
       }}
     >
       {children}

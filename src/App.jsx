@@ -7,6 +7,7 @@ import NotificationToast from './components/NotificationToast';
 import EditProfileModal from './components/EditProfileModal';
 import VideoCallModal from './components/VideoCallModal';
 import InvoiceModal from './components/InvoiceModal';
+import SignInModal from './components/SignInModal';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -55,6 +56,7 @@ function MainRouter() {
       <EditProfileModal />
       <VideoCallModal />
       <InvoiceModal />
+      <SignInModal />
       <NotificationToast />
 
     </div>

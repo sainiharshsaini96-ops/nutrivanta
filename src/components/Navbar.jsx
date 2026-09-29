@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import { BRAND_INFO } from '../data/mockData';
 
 export default function Navbar() {
-  const { activePage, setActivePage, user, showToast, darkMode, toggleDarkMode } = useApp();
+  const { activePage, setActivePage, user, showToast, darkMode, toggleDarkMode, isLoggedIn, setIsSignInOpen, signOut } = useApp();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -151,22 +151,42 @@ export default function Navbar() {
             <span>Book Consultation</span>
           </button>
 
-          {/* User Profile Avatar with dropdown shortcut */}
-          <button
-            onClick={() => setActivePage('dashboard')}
-            title="Go to Patient Dashboard"
-            className="flex items-center gap-2 group cursor-pointer focus:outline-none"
-          >
-            <img
-              alt={`${user.name}'s Profile Avatar`}
-              className={`h-9 w-9 rounded-full object-cover border-2 transition-all ${
-                activePage === 'dashboard'
-                  ? 'border-primary ring-2 ring-primary/30'
-                  : 'border-surface-variant group-hover:border-primary'
-              }`}
-              src={user.avatar}
-            />
-          </button>
+          {/* Sign In / Sign Out */}
+          {isLoggedIn ? (
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setActivePage('dashboard')}
+                title="Go to Patient Dashboard"
+                className="flex items-center gap-2 group cursor-pointer focus:outline-none"
+              >
+                <img
+                  alt={`${user.name}'s Profile Avatar`}
+                  className={`h-9 w-9 rounded-full object-cover border-2 transition-all ${
+                    activePage === 'dashboard'
+                      ? 'border-primary ring-2 ring-primary/30'
+                      : 'border-surface-variant group-hover:border-primary'
+                  }`}
+                  src={user.avatar}
+                />
+              </button>
+              <button
+                onClick={signOut}
+                title="Sign Out"
+                className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-on-surface-variant hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 border border-surface-variant transition-all"
+              >
+                <span className="material-symbols-outlined text-base">logout</span>
+                <span>Sign Out</span>
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => setIsSignInOpen(true)}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-white text-sm font-bold hover:opacity-90 hover:shadow-md transition-all shadow-sm"
+            >
+              <span className="material-symbols-outlined text-base">login</span>
+              <span>Sign In</span>
+            </button>
+          )}
 
           {/* Mobile Menu Hamburger */}
           <button
@@ -235,6 +255,23 @@ export default function Navbar() {
             >
               Book Consultation
             </button>
+            {isLoggedIn ? (
+              <button
+                onClick={() => { signOut(); setMobileMenuOpen(false); }}
+                className="w-full text-left px-4 py-2.5 rounded-lg text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 flex items-center gap-2 border border-red-200 dark:border-red-900"
+              >
+                <span className="material-symbols-outlined text-base">logout</span>
+                <span>Sign Out</span>
+              </button>
+            ) : (
+              <button
+                onClick={() => { setIsSignInOpen(true); setMobileMenuOpen(false); }}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold bg-primary text-white"
+              >
+                <span className="material-symbols-outlined text-base">login</span>
+                <span>Sign In</span>
+              </button>
+            )}
           </div>
         </div>
       )}
