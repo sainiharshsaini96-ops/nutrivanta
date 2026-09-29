@@ -151,7 +151,7 @@ export default function NutritionistProfilePage() {
           {activeTab === 'overview' && (
             <div className="space-y-6 animate-fade-in">
               <div className="bg-surface-container-lowest dark:bg-inverse-surface rounded-20px shadow-ambient border border-surface-variant p-6">
-                <h2 className="text-lg font-bold text-on-surface mb-3">About Dr. Priya</h2>
+                <h2 className="text-lg font-bold text-on-surface mb-3">About Dr. Anchal</h2>
                 <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
                   {doc.about}
                 </p>

@@ -7,7 +7,7 @@ export default function VideoCallModal() {
   const [cameraOn, setCameraOn] = useState(true);
   const [chatOpen, setChatOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: "Dr. Priya Sharma", text: "Hello Anchal! How are you feeling today?", time: "10:01 AM" }
+    { sender: "Dr. Anchal", text: "Hello Anchal! How are you feeling today?", time: "10:01 AM" }
   ]);
   const [inputMsg, setInputMsg] = useState("");
 

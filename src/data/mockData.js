@@ -23,7 +23,7 @@ export const INITIAL_USER = {
     totalSpent: 3497
   },
   upcomingConsultation: {
-    doctorName: "Dr. Priya Sharma",
+    doctorName: "Dr. Anchal",
     doctorRole: "Clinical Nutritionist",
     doctorAvatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuD0J7d05OelEi5i1siN_UhYKDv1U0PFbQtd85D5WpV6ZLtQ0Y_YX384_VIEjrVxh5ZNyZeZ5Vidbao4yO-4L_vArPqGARo7vxkZxREaS2YdTGnRTd0SNG6OoGC3bb0AqMIetPFNXFgH7CHsDyKWAXcXUnVs5KGZg3cqXyy580oX_-qXOHggyAcrGjYOPSzKCdPQyEA9H9L-Oy6ZHLiHtO2R9ZTeTNvXMTX1iAWcVomfZlL8ddpkv3yhrw",
     date: "25 August 2026",
@@ -34,8 +34,8 @@ export const INITIAL_USER = {
 };
 
 export const FEATURED_NUTRITIONIST = {
-  id: "dr-priya-sharma",
-  name: "Dr. Priya Sharma",
+  id: "dr-anchal",
+  name: "Dr. Anchal",
   role: "Senior Clinical Nutrition Specialist",
   degree: "M.Sc. Clinical Nutrition, RD",
   experience: "8+ Years",
@@ -44,7 +44,7 @@ export const FEATURED_NUTRITIONIST = {
   location: "Delhi NCR, India",
   nextAvailable: "Tomorrow, 10:00 AM",
   avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuByZdtP7zLZpAWTBv8ka3nlF31p0c3bJnR_FPIzMZtKRviMWeeDeDT6vjIgfCEWfBKHjIwFZkYbQunvYhblITFPxCV9qWRXawd1ceFa1dVnyd-IoYQOiVd-phQlzJJfPM4YzXmimJEViJtpr4_Ov8_gLn32aZvE5HF0XQO7X8M0U70hhGdlWf_Ci9zCh2PT6o0eg6aWzPgPpA1Lc8uRo5FLFpn18vbLlu5eNzp16NksovPJwQw-XThk9g",
-  about: "Dr. Priya Sharma is a clinical nutrition specialist focused on personalized nutrition strategies. With over 8 years of experience in clinical settings, she believes in a holistic, science-backed approach to wellness. She specializes in chronic disease management, particularly diabetes and metabolic disorders, translating complex nutritional science into actionable, everyday dietary changes for her clients.",
+  about: "Dr. Anchal is a clinical nutrition specialist focused on personalized nutrition strategies. With over 8 years of experience in clinical settings, she believes in a holistic, science-backed approach to wellness. She specializes in chronic disease management, particularly diabetes and metabolic disorders, translating complex nutritional science into actionable, everyday dietary changes for her clients.",
   expertise: [
     "Weight Management",
     "Diabetes & Insulin Resistance",
@@ -96,7 +96,7 @@ export const FEATURED_NUTRITIONIST = {
       initials: "AK",
       rating: 5,
       date: "14 Aug 2026",
-      comment: "Dr. Priya completely changed my approach to managing my diabetes. The meal plans are practical, culturally tailored, and easy to follow."
+      comment: "Dr. Anchal completely changed my approach to managing my diabetes. The meal plans are practical, culturally tailored, and easy to follow."
     },
     {
       id: "r2",
@@ -121,7 +121,7 @@ export const INITIAL_TRANSACTIONS = [
   {
     id: "TXN-10482",
     date: "25 Aug 2026",
-    doctor: "Dr. Priya Sharma",
+    doctor: "Dr. Anchal",
     doctorInitials: "PS",
     service: "60-Min Consultation",
     amount: 1299,
@@ -154,7 +154,7 @@ export const INITIAL_TRANSACTIONS = [
   {
     id: "TXN-10210",
     date: "04 May 2026",
-    doctor: "Dr. Priya Sharma",
+    doctor: "Dr. Anchal",
     doctorInitials: "PS",
     service: "Initial Assessment",
     amount: 799,
@@ -241,7 +241,7 @@ export const ADVANTAGES = [
 export const PROTOTYPE_SCREENS = [
   { id: "home", label: "Home Page (Hero & Overview)", folder: "home_page / nutrivanta_personalized_nutrition_platform", icon: "home" },
   { id: "about", label: "About Page (Mission & Values)", folder: "about_page", icon: "info" },
-  { id: "nutritionists", label: "Nutritionist Profile (Dr. Priya)", folder: "nutritionist_profile", icon: "badge" },
+  { id: "nutritionists", label: "Nutritionist Profile (Dr. Anchal)", folder: "nutritionist_profile", icon: "badge" },
   { id: "checkout", label: "Checkout & Booking Flow", folder: "checkout_page", icon: "shopping_cart" },
   { id: "dashboard", label: "User Profile Dashboard", folder: "user_profile_dashboard_1 & 2", icon: "person" },
   { id: "payments", label: "Payment History Dashboard", folder: "payment_history_dashboard", icon: "receipt_long" },

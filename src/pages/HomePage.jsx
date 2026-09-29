@@ -115,7 +115,7 @@ export default function HomePage() {
               Consult With Our Top Clinical Expert
             </h2>
             <p className="text-sm sm:text-base text-on-surface-variant mt-2">
-              Book a 1-on-1 personalized telehealth session with Dr. Priya Sharma and receive a customized dietary blueprint.
+              Book a 1-on-1 personalized telehealth session with Dr. Anchal and receive a customized dietary blueprint.
             </p>
           </div>
 

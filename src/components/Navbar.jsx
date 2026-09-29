@@ -134,7 +134,7 @@ export default function Navbar() {
                     className="p-2.5 rounded-xl bg-surface-container-low dark:bg-surface-container hover:bg-surface-container cursor-pointer transition-colors"
                   >
                     <p className="text-xs font-semibold text-primary">Consultation Confirmed</p>
-                    <p className="text-xs text-on-surface-variant mt-0.5">Your video consultation with Dr. Priya Sharma is scheduled for 25 Aug at 10:00 AM.</p>
+                    <p className="text-xs text-on-surface-variant mt-0.5">Your video consultation with Dr. Anchal is scheduled for 25 Aug at 10:00 AM.</p>
                     <span className="text-[10px] text-outline mt-1 block">10 mins ago</span>
                   </div>
                 </div>
