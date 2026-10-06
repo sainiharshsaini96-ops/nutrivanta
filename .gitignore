@@ -44,3 +44,6 @@ Desktop.ini
 scratch/
 tmp/
 .cache/
+
+# User data (security — contains hashed passwords)
+server/src/data/users.json

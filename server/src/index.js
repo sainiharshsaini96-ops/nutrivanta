@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import apiRouter from './routes/api.js';
+import authRouter from './routes/auth.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,6 +39,7 @@ app.use((req, res, next) => {
 
 // API Routes
 app.use('/api', apiRouter);
+app.use('/api/auth', authRouter);
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -52,7 +54,10 @@ app.get('/', (req, res) => {
       brands: '/api/brands',
       reviews: '/api/reviews',
       validatePromo: 'POST /api/promo/validate',
-      createOrder: 'POST /api/orders'
+      createOrder: 'POST /api/orders',
+      register: 'POST /api/auth/register',
+      login: 'POST /api/auth/login',
+      me: 'GET /api/auth/me'
     }
   });
 });

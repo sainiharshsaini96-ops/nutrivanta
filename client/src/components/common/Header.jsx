@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
+import { useAuth } from '../../context/AuthContext';
 
 export const Header = ({ searchTerm, setSearchTerm, onOpenFilters }) => {
   const { itemsCount, setIsCartOpen } = useCart();
   const { wishlistCount } = useWishlist();
+  const { user, isAuthenticated, logout, openAuthModal } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef(null);
 
   const isHome = location.pathname === '/';
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handler = (e) => {
+      if (profileRef.current && !profileRef.current.contains(e.target)) {
+        setProfileOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, []);
 
   return (
     <header className="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
@@ -77,14 +92,50 @@ export const Header = ({ searchTerm, setSearchTerm, onOpenFilters }) => {
               )}
             </button>
 
-            {/* Profile Avatar */}
-            <button className="w-9 h-9 ml-1 flex items-center justify-center rounded-full overflow-hidden ring-2 ring-transparent hover:ring-primary/20 transition-all">
-              <img
-                alt="Profile"
-                className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoG9OCOitjB_d6OG72cC0bNQMloIw1MDPER0bwIH7LFOf-igH4fFa-u32YXz_qvQlyxY7peTELkQ4eUpNMBrq3JO8AU6fM9Qo-sGCwqMNVU-b9RAQgdAFbN4VJXAwYYGjC4dbz9IfSa5kjFGLMFGQM16wOacpq7G9uVrdEbZXKC4YkLZTFKVIZJ3pIikM9vVUdE9GhhNzAfvguG-MkHfTIEEcabeBQDc9caaJwaxc9Zip0huYBNcIIng"
-              />
-            </button>
+            {/* Profile / Auth Button */}
+            <div className="relative" ref={profileRef}>
+              {isAuthenticated ? (
+                <>
+                  <button
+                    id="profile-avatar-btn"
+                    onClick={() => setProfileOpen(p => !p)}
+                    className="w-9 h-9 ml-1 flex items-center justify-center rounded-full overflow-hidden ring-2 ring-transparent hover:ring-primary/40 transition-all bg-primary/10 text-primary font-bold text-sm select-none"
+                    title={user?.name || 'Profile'}
+                    aria-label="Profile menu"
+                  >
+                    {user?.avatar || user?.name?.[0]?.toUpperCase() || '?'}
+                  </button>
+                  {profileOpen && (
+                    <div className="absolute right-0 top-11 w-52 bg-surface rounded-2xl shadow-xl border border-outline-variant/40 z-50 overflow-hidden animate-slideUp">
+                      <div className="px-4 py-3 border-b border-outline-variant/30">
+                        <p className="font-semibold text-sm text-on-surface truncate">{user?.name}</p>
+                        <p className="text-xs text-on-surface-variant truncate">{user?.email}</p>
+                      </div>
+                      <div className="p-1.5">
+                        <button
+                          id="signout-btn"
+                          onClick={() => { logout(); setProfileOpen(false); }}
+                          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-on-surface hover:bg-surface-container-high transition-colors"
+                        >
+                          <span className="material-symbols-outlined text-[18px] text-on-surface-variant">logout</span>
+                          Sign Out
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <button
+                  id="signin-header-btn"
+                  onClick={() => openAuthModal('signin')}
+                  className="ml-1 h-9 px-4 rounded-full bg-primary text-on-primary text-sm font-semibold flex items-center gap-1.5 hover:brightness-110 transition-all active:scale-95 shadow-sm"
+                  aria-label="Sign In"
+                >
+                  <span className="material-symbols-outlined text-[16px]">person</span>
+                  <span className="hidden sm:inline">Sign In</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
